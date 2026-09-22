@@ -113,7 +113,7 @@ function App() {
       <Separator />
       <div className="rail-heading recent-heading"><span>RECENT</span><span>{String(history.length).padStart(2, "0")}</span></div>
       <ScrollArea className="history-list">{history.map((item, i) => <Button key={`${item.date}-${i}`} variant="ghost" size="sm" className={`rail-item history-link ${activeRun === item ? "is-active" : ""}`} onClick={() => loadRun(item)}><Clock3 size={14} /><span className="history-label">{item.title}</span></Button>)}</ScrollArea>
-      <div className="rail-footer"><Separator /><div className="credit" aria-label="Made with love by"><span>Made with</span><Heart size={13} fill="currentColor" className="credit-heart"/><span>by</span><ChatGPTMark/><img src="/creator-avatar.png" alt="" width="19" height="19" /></div></div>
+      <div className="rail-footer"><Separator /><a className="credit" href="https://github.com/razibit" target="_blank" rel="noreferrer" aria-label="Made with love by — visit Rajib on GitHub"><span>Made with</span><Heart size={13} fill="currentColor" className="credit-heart"/><span>by</span><ChatGPTMark/><img src="/creator-avatar.png" alt="" width="19" height="19" /></a></div>
     </aside>
 
     <aside className="control-pane">
